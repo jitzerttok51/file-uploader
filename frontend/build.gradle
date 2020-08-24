@@ -7,13 +7,6 @@ task buildReactApp(type: NpmTask) {
     args = ["run", "build"]
 }
 
-task deployReactApp(type: Copy) {
-    dependsOn buildReactApp
-    from "${project.projectDir}/frontend/build/"
-    include "**/**"
-    into "${buildDir}/resources/main/static"
-}
-
 task cleanNodeModules(type: Delete) {
     delete "${projectDir}/node_modules"
     delete "${projectDir}/frontend/node_modules"

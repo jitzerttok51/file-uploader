@@ -24,4 +24,12 @@ test {
     useJUnitPlatform()
 }
 
-bootJar.dependsOn ":frontend:deployReactApp"
+bootJar.dependsOn "deployReactApp"
+clean.dependsOn ":frontend:cleanNodeModules"
+
+task deployReactApp(type: Copy) {
+    dependsOn ":frontend:buildReactApp"
+    from "${project.projectDir}/frontend/build/"
+    include "**/**"
+    into "${buildDir}/resources/main/static"
+}
