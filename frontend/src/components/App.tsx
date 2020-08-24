@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 import FileUpload from "./FileUpload";
 import Notify from "./Notify";
-import { store } from './config/StoreConfig';
+import { store } from '../config/StoreConfig';
 import { Provider } from "react-redux"
 import FilesList from './FilesList';
 

@@ -1,7 +1,7 @@
-import { StoredFile } from "./reducers/fileReducer";
+import { StoredFile } from "../reducers/fileReducer";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { NotifyAction } from "./reducers/notifyReducer";
+import { NotifyAction } from "../reducers/notifyReducer";
 import axios from "axios";
 
 

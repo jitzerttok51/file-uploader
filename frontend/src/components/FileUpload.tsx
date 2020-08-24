@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { ProgressBar } from "react-bootstrap"
-import { NotifyAction } from './reducers/notifyReducer';
+import { NotifyAction } from '../reducers/notifyReducer';
 import Axios from 'axios';
-import { FetchFiles } from './reducers/fileReducer';
+import { FetchFiles } from '../reducers/fileReducer';
 
 export default function FileUpload() {
 

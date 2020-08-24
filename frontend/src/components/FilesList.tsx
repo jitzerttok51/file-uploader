@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import { AppState } from "./config/StoreConfig"
+import { AppState } from "../config/StoreConfig"
 import { useSelector, useDispatch } from "react-redux";
-import { FetchFiles } from "./reducers/fileReducer";
+import { FetchFiles } from "../reducers/fileReducer";
 import DownloadButton from "./DownloadButton";
 
 export default function FilesList() {
@@ -10,6 +10,7 @@ export default function FilesList() {
 
     useEffect(()=>{
         dispatch(FetchFiles());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     return (
